@@ -35,14 +35,10 @@
                 <include name="NavigationKeys"/>
                 <include name="Game"/>
                 <include name="Timer"/>
-<<<<<<< HEAD
                 <include name="Color"/>
                 <include name="BlockRotation"/>
                 <include name="BlockRotationInGame"/>
                 <include name="HallOfFame"/>
-=======
-                <include name="Game"/>
->>>>>>> Add test class for LineRemover
             </run>
         </groups>
         <classes>
@@ -64,15 +60,12 @@
             <class name="com.epam.prejap.tetris.game.GridTest"/>
             <class name="com.epam.prejap.tetris.game.PlayfieldTest"/>
             <class name="com.epam.prejap.tetris.game.TimerTest"/>
-<<<<<<< HEAD
             <class name="com.epam.prejap.tetris.game.RefereeTest"/>
             <class name="com.epam.prejap.tetris.block.ColorTest"/>
             <class name="com.epam.prejap.tetris.block.BlockRotationTestFactory"/>
             <class name="com.epam.prejap.tetris.game.PlayfieldBlockRotationTestFactory"/>
             <class name="com.epam.prejap.tetris.data.HallOfFameMemberTest"/>
             <class name="com.epam.prejap.tetris.data.HallOfFameTest"/>
-=======
->>>>>>> Add test class for LineRemover
             <class name="com.epam.prejap.tetris.game.LineRemoverTest"/>
         </classes>
     </test>

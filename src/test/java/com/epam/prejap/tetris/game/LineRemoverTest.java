@@ -7,11 +7,7 @@ import java.util.Arrays;
 
 import static org.testng.Assert.*;
 
-<<<<<<< HEAD
-@Test(groups = "LineRemover")
-=======
 @Test(groups = "Game")
->>>>>>> Add test class for LineRemover
 public class LineRemoverTest {
 
     private final int ROWS = 10;
@@ -110,8 +106,4 @@ public class LineRemoverTest {
         //then
         assertTrue(Arrays.deepEquals(lineRemover.getGrid(), outputGrid));
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> Add test class for LineRemover
 }

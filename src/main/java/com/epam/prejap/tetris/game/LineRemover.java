@@ -69,5 +69,4 @@ public class LineRemover {
     byte[][] getGrid() {
         return grid;
     }
-
 }

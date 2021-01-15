@@ -3,8 +3,6 @@ package com.epam.prejap.tetris.game;
 import com.epam.prejap.tetris.block.Block;
 import com.epam.prejap.tetris.block.BlockFeed;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.function.Supplier;
 import java.util.stream.IntStream;
 
@@ -18,6 +16,7 @@ public class Grid {
     private final int rows;
     private final int cols;
     private final BlockFeed feed;
+    private final LineRemover lineRemover = new LineRemover();
 
     private int row;
     private int col;
@@ -51,6 +50,27 @@ public class Grid {
 
     void hide(Block block) {
         forEachBrick(((i, j) -> byteGrid[i + row][j + col] = 0), block);
+    }
+
+    /**
+     * Clears game grid from complete lines
+     * before every new block arrives.
+     */
+    void removeCompleteLines() {
+        lineRemover.setGrid(byteGrid);
+        lineRemover.act();
+        updateGrid(lineRemover.getGrid());
+    }
+
+    /**
+     * Update grid after removal of complete lines.
+     *
+     * @param gridAfterRemoval grid in with complete lines were removed
+     */
+    private void updateGrid(byte[][] gridAfterRemoval) {
+        for (int i = 0; i < rows; i++) {
+            if (cols >= 0) System.arraycopy(gridAfterRemoval[i], 0, byteGrid[i], 0, cols);
+        }
     }
 
     boolean isValidMove(Block block, int rowOffset, int colOffset) {

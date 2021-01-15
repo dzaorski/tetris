@@ -33,6 +33,7 @@ public class Playfield {
         block = feed.nextBlock();
         notifyBlockObservers();
         grid.newBlock(block.cols());
+        grid.removeCompleteLines();
         show(block);
     }
 

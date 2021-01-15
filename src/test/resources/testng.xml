@@ -21,6 +21,7 @@
                 <include name="Playfield"/>
                 <include name="Referee"/>
                 <include name="BlockRotationInGame" />
+                <include name="LineRemover"/>
             </define>
             <define name="HallOfFame">
                 <include name="HallOfFameMember"/>
@@ -65,6 +66,7 @@
             <class name="com.epam.prejap.tetris.game.PlayfieldBlockRotationTestFactory"/>
             <class name="com.epam.prejap.tetris.data.HallOfFameMemberTest"/>
             <class name="com.epam.prejap.tetris.data.HallOfFameTest"/>
+            <class name="com.epam.prejap.tetris.game.LineRemoverTest"/>
         </classes>
     </test>
 </suite>
